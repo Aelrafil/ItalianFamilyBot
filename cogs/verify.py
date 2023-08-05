@@ -28,8 +28,8 @@ class verifyCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.slash_command(name="ticket-setup")
-    async def ticketSetup(self, inter: discord.ApplicationCommandInteraction, canale: discord.TextChannel):
+    @commands.slash_command(name="verify-setup")
+    async def verifySetup(self, inter: discord.ApplicationCommandInteraction, canale: discord.TextChannel):
         em = discord.Embed(
             title="🛡️Verifica🛡️",
             description="Premi il bottone\n"
@@ -37,4 +37,4 @@ class verifyCog(commands.Cog):
             color=discord.Color.blurple()
         )
         em.set_author(name="𝑰𝒕𝒂𝒍𝒊𝒂𝒏 𝑭𝒂𝒎𝒊𝒍𝒚", url=inter.guild.icon.url)
-        await inter.send(embed=em, view=verifyButton())
+        await canale.send(embed=em, view=verifyButton())
