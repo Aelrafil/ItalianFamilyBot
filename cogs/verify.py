@@ -6,7 +6,7 @@ class verifyButton(discord.ui.View):
     def __init__(self):
         super().__init__(timeout=None)
 
-    @discord.ui.button(label="Verificati", custom_id="peristentView:verifyButton", style=ButtonStyle.green)
+    @discord.ui.button(label="Verificati", custom_id="peristent_view:verifyButton", style=ButtonStyle.green)
     async def verifyButton(self, button: discord.ui.Button, ctx: commands.Context):
         role = ctx.guild.get_role(1136383971337457745)
 

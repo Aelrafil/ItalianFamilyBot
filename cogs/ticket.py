@@ -6,7 +6,7 @@ class ticketButtons(discord.ui.View):
     def __init__(self):
         super().__init__(timeout=None)
 
-    @discord.ui.button(label="Generale", custom_id="persistentView:generaleButton", style=ButtonStyle.blurple)
+    @discord.ui.button(label="Generale", custom_id="persistent_view:generaleButton", style=ButtonStyle.blurple)
     async def generaleButton(self, button: discord.ui.Button, ctx: commands.Context):
         try:
             em = discord.Embed(
@@ -20,7 +20,7 @@ class ticketButtons(discord.ui.View):
         except:
             pass
 
-    @discord.ui.button(label="Generale", custom_id="persistentView:candidatureButton", style=ButtonStyle.blurple)
+    @discord.ui.button(label="Generale", custom_id="persistent_view:candidatureButton", style=ButtonStyle.blurple)
     async def candidatureButton(self, button: discord.ui.Button, ctx: commands.Context):
         try:
             em = discord.Embed(
